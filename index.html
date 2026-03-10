@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gifspace :: the ultimte libary of vibes</title>
+    <style>
+        /* THE GOOBER STYLES */
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+        body {
+            font-family: 'Comic Neue', 'Comic Sans MS', cursive;
+            background-color: #ffffd4; /* Old website yellow */
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="48" viewport="0 0 100 100" style="fill:%23FF69B4;font-size:24px;"><text y="50%">👆</text></svg>'), auto;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            border: 5px dashed #ff00ff;
+            padding: 20px;
+            background: #fff;
+            transform: rotate(-1deg);
+            box-shadow: 10px 10px 0px #00ffff;
+        }
+
+        h1 {
+            font-size: 4rem;
+            color: #ff00ff;
+            text-shadow: 3px 3px 0px #00ffff;
+            margin: 0;
+            animation: wiggle 0.5s infinite;
+        }
+
+        @keyframes wiggle {
+            0% { transform: rotate(-3deg); }
+            50% { transform: rotate(3deg); }
+            100% { transform: rotate(-3deg); }
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: #blue; /* Oops, this css is broken but it still looks cool */
+            font-weight: bold;
+        }
+
+        .marquee-container {
+            background: #ff00ff;
+            color: yellow;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            border: 2px solid black;
+        }
+
+        .main-content {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .gif-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .gif-card {
+            background: white;
+            border: 3px solid #black;
+            padding: 10px;
+            width: 200px;
+            transform: rotate(2deg);
+            transition: all 0.3s ease;
+        }
+
+        .gif-card:nth-child(even) {
+            transform: rotate(-2deg);
+            background: #e6e6e6;
+        }
+
+        .gif-card:hover {
+            transform: scale(1.1) rotate(0deg) !important;
+            box-shadow: 0 0 20px #ff00ff;
+            border-color: #ff00ff;
+        }
+
+        .gif-placeholder {
+            width: 100%;
+            height: 150px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            border: 1px dashed #999;
+            margin-bottom: 10px;
+            font-size: 0.8rem;
+        }
+
+        .btn {
+            background: #00ffff;
+            border: 3px solid black;
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            font-family: inherit;
+            cursor: pointer;
+            box-shadow: 5px 5px 0px #ff00ff;
+            transition: all 0.1s;
+        }
+
+        .btn:active {
+            box-shadow: none;
+            transform: translate(5px, 5px);
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 2px dotted #999;
+            padding-top: 20px;
+        }
+
+        .visitor-counter {
+            font-family: 'Courier New', monospace;
+            background: black;
+            color: #00ff00;
+            padding: 5px 10px;
+            display: inline-block;
+            font-size: 1.2rem;
+            border: 2px inset #ccc;
+        }
+
+        /* The occasional misspelled class name just for fun */
+        .ufixed {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background: red;
+            color: white;
+            padding: 5px;
+            font-size: 12px;
+            border-radius: 50%;
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>gifspace</h1>
+        <div class="subtitle">welcom 2 my libary of moving pics</div>
+        <p>made with luv by me (a goober)</p>
+    </header>
+
+    <div class="marquee-container">
+        <marquee behavior="scroll" direction="left">
+            ⚠️ WARNING: These gifs are extremely rare and powerful. Do not look directly at them for too long or you will turn into a goober. ⚠️ Best viewed on a monitor from 2005. ⚠️ Loading... please wait... or dont. ⚠️
+        </marquee>
+    </div>
+
+    <div class="main-content">
+        <p style="font-size: 1.2rem;">This is a collection of my life's work. Pls donut steal them (unless you give me credit then its ok).</p>
+        
+        <button class="btn" onclick="alert('Ouch! That hurt my feelings.');">CLICK HERE FOR SURPRIZE</button>
+
+        <div class="gif-grid">
+            <!-- Gif 1 -->
+            <div class="gif-card">
+                <div class="gif-placeholder">
+                    [IMG_0423.gif]
+                </div>
+                <h3>Cat falling off tabel</h3>
+                <p>He ok. Just embarassed.</p>
+            </div>
+
+            <!-- Gif 2 -->
+            <div class="gif-card">
+                <div class="gif-placeholder" style="background-color: #ffcccb;">
+                    [funny_dance.gif]
+                </div>
+                <h3>Me dancing at 3am</h3>
+                <p>I call this move "The Wobble".</p>
+            </div>
+
+            <!-- Gif 3 -->
+            <div class="gif-card">
+                <div class="gif-placeholder" style="background-color: #add8e6;">
+                    [explosion_1.gif]
+                </div>
+                <h3>BIG BOOM</h3>
+                <p>I dropped my harddrive. Sad.</p>
+            </div>
+
+            <!-- Gif 4 -->
+            <div class="gif-card">
+                <div class="gif-placeholder" style="background-color: #90ee90;">
+                    [smoothie.gif]
+                </div>
+                <h3>Blender go brrr</h3>
+                <p>Don't drink it. It tastes like batteries.</p>
+            </div>
+        </div>
+        
+        <br>
+        <button class="btn" style="background-color: yellow;" onclick="document.body.style.backgroundColor = '#FF69B4';">CHANGE MOOD</button>
+    </div>
+
+    <footer>
+        <p>Thx for visiting my libary. You are visitor number:</p>
+        <div class="visitor-counter">000004</div>
+        <p style="font-size: 0.8rem; color: #666;">Copyright © 2026 Me. All rights reserved. (jk do whatever u want).</p>
+    </footer>
+
+    <div class="ufixed" title="Im watching u">
+        👀
+    </div>
+
+</body>
+</html>
